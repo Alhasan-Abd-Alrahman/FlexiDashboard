@@ -22,22 +22,22 @@ export default function WidgetCard({ widget, isDropped }) {
   return (
     <div ref={setNodeRef} style={style} {...listeners} {...attributes}>
       <Box mb="4" maxWidth="100%">
-        <Card size="2">
-          <Flex gap="3" align="center">
-            <img
-              src={widget.image}
-              alt={widget.title}
-              className={styles.img}
-            />
-            <Box>
-              <Text as="div" size="3" weight="bold">{widget.title}</Text>
-              <Text as="div" size="2" color="gray" className={styles.description}>
-                {widget.description}
-              </Text>
-              <Text as="div" className={styles.typeWidget} >{widget.typeWidget}</Text>
-            </Box>
-          </Flex>
-        </Card>
+      <Card size="2" className={styles.card}>
+  <Flex gap="3" align="center">
+    <img
+      src={widget.image}
+      alt={widget.title}
+      className={styles.img}
+    />
+    <Box>
+      <Text as="div" size="3" weight="bold">{widget.title}</Text>
+      <Text as="div" size="2" color="gray" className={styles.description}>
+        {widget.description}
+      </Text>
+      <Text as="div" className={styles.typeWidget}>{widget.typeWidget}</Text>
+    </Box>
+  </Flex>
+</Card>
       </Box>
     </div>
   );

@@ -11,7 +11,8 @@
   transition: right 0.3s ease;
   border-left: 2px solid #a19393;
   z-index: 2;
-  overflow-y: auto;
+  overflow-x: visible; 
+
 }
 .open {
   right: 0;

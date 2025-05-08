@@ -10,7 +10,7 @@ import FilterButtons from "./FilterButtons";
 //import img
 import img1 from "../../assets/imgwidget/Bubble Chart.png"
 import img2 from "../../assets/imgwidget/Advertisement Widgets.png"
-import img3 from "../../assets/imgwidget/Average Age Chart.png"
+// import img3 from "../../assets/imgwidget/Average Age Chart.png"
 import img4 from "../../assets/imgwidget/Header Slider Widget.png"
 import img5 from "../../assets/imgwidget/Quick Links Widget.png"
 
@@ -35,14 +35,14 @@ export default function RightSidebar({ isOpen , onClose  }) {
         "   Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elitLorem ipsum dolor sit amet consectetur adipisicing elit. Ut adipisci nostrum voluptas iusto. Sint facilis quisquam eveniet voluptatibus odit non accusamus expedita, nihil",
       typeWidget: "Informative Widgets",
     },
-    {
-      id: "3",
-      image: img3,
-      title: "Average Age Chart",
-      description:
-        "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut adipisci nostrum voluptas iusto. Sint facilis quisquam eveniet voluptatibus odit non accusamus expedita, nihil",
-      typeWidget: "Informative Widgets",
-    },
+    // {
+    //   id: "3",
+    //   image: img3,
+    //   title: "Average Age Chart",
+    //   description:
+    //     "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut adipisci nostrum voluptas iusto. Sint facilis quisquam eveniet voluptatibus odit non accusamus expedita, nihil",
+    //   typeWidget: "Informative Widgets",
+    // },
     {
       id: "4",
       image: img4,
@@ -119,14 +119,17 @@ export default function RightSidebar({ isOpen , onClose  }) {
             types={["All", "Informative Widgets", "Statistics Widgets"]}
             widgets={template}
           />
+         <div className={styles.cardsWrapper}>
+    <div className={styles.cardszone}>
+      <Tabs.Content value="tab1">
+        <WidgetList widgets={filteredWidgets} />
+      </Tabs.Content>
 
-          <Tabs.Content value="tab1">
-            <WidgetList widgets={filteredWidgets} />
-          </Tabs.Content>
-
-          <Tabs.Content value="tab2">
-            <WidgetList widgets={filteredDrafts} />
-          </Tabs.Content>
+      <Tabs.Content value="tab2">
+        <WidgetList widgets={filteredDrafts} />
+      </Tabs.Content>
+    </div>
+  </div>
         </Tabs.Root>
       </div>
     </div>
